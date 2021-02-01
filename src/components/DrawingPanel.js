@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Row from "./Row";
+import Pixel from "./Pixel";
 
-const DrawingPanel = () => {
+const DrawingPanel = ({ color }) => {
   let rows = [];
 
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 29; i++) {
     rows.push(i);
   }
 
@@ -17,7 +17,7 @@ const DrawingPanel = () => {
             return (
               <div key={i}>
                 {rows.map((i) => {
-                  return <Row key={i} />;
+                  return <Pixel key={i} color={color} />;
                 })}
               </div>
             );
@@ -31,14 +31,16 @@ const DrawingPanel = () => {
 const Canvas = styled.div`
   border: 1px solid black;
   box-shadow: 1px 1px 10px 5px;
-  height: 480px;
-  width: 480px;
+  height: 492px;
+  width: 492px;
   margin-top: 5%;
 
   background-color: white;
 
   display: flex;
   flex-flow: row nowrap;
+
+  cursor: crosshair;
 `;
 
 export default DrawingPanel;
