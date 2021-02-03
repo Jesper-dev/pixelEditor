@@ -2,12 +2,14 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 import Header from "./components/Header";
+import About from "./components/About";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
       <Header />
+      <About />
     </>
   );
 };
@@ -17,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+    background-color: #dee1ec;
   }
 `;
 

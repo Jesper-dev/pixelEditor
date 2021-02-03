@@ -10,6 +10,7 @@ const Toolbar = ({ setColor }) => {
     "blue",
     "darkblue",
     "green",
+    "Lime",
     "brown",
     "yellow",
     "red",
@@ -43,6 +44,7 @@ const Toolbar = ({ setColor }) => {
         {colorArray.map((i) => {
           return (
             <Color
+              key={i}
               onClick={() => runFuncsColor(i)}
               style={{ backgroundColor: i }}
             />
@@ -60,6 +62,7 @@ const Wrapper = styled.div`
   width: 231px;
   height: 484px;
   margin-top: 10%;
+  margin-left: 5%;
 
   display: flex;
   flex-flow: column nowrap;
