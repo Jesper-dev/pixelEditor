@@ -4,6 +4,7 @@ import styled from "styled-components";
 import DrawingPanel from "./PixelEditorn/DrawingPanel";
 import Toolbar from "./PixelEditorn/Toolbar";
 import Navbar from "./Navbar";
+import Save from "./PixelEditorn/Save";
 
 const Header = () => {
   const [color, setColor] = useState("blue");
@@ -20,6 +21,10 @@ const Header = () => {
           <DrawingWrapper>
             <DrawingPanel color={color} />
           </DrawingWrapper>
+
+          <SaveWrapper>
+            <Save />
+          </SaveWrapper>
         </EditorWrapper>
       </HeaderWrapper>
     </>
@@ -59,7 +64,15 @@ const DrawingWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-flow: row nowrap;
-  width: 65%;
+  width: 30%;
+  height: 600px;
+`;
+
+const SaveWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 6%;
   height: 600px;
 `;
 

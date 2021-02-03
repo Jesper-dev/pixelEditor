@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const About = () => {
   return (
     <Main>
       <FlexContainerTitle>
-        <Title>About</Title>
+        <ScrollAnimation animateIn="fadeIn" duration="2" animateOnce="true">
+          <Title>About</Title>
+        </ScrollAnimation>
       </FlexContainerTitle>
 
       <FlexContainerText>
-        <Text>
-          Welcome to a very, very simple pixel editor. Make <em>simple</em>{" "}
-          pixel art and make it <strong>fast</strong>. Share it with others on
-          the 'discover' page or keep it to yourself.
-        </Text>
+        <ScrollAnimation animateIn="fadeIn" duration="2" animateOnce="true">
+          <Text>
+            Welcome to a very, very simple pixel editor. Make <em>simple</em>{" "}
+            pixel art and make it <strong>fast</strong>. Share it with others on
+            the 'discover' page or keep it to yourself.
+          </Text>
+        </ScrollAnimation>
       </FlexContainerText>
     </Main>
   );

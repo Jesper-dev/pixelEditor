@@ -1,24 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ColorList from "./ColorList";
 
 const Toolbar = ({ setColor }) => {
   const [active, setActive] = useState(false);
-
-  let colorArray = [
-    "black",
-    "grey",
-    "blue",
-    "darkblue",
-    "green",
-    "Lime",
-    "brown",
-    "yellow",
-    "red",
-    "purple",
-    "pink",
-    "orange",
-    "turquoise",
-  ];
 
   const runFuncsEraser = () => {
     setColor("white");
@@ -41,7 +26,7 @@ const Toolbar = ({ setColor }) => {
         </Eraser>
       </EraserWrapper>
       <ColorWrapper>
-        {colorArray.map((i) => {
+        {ColorList.map((i) => {
           return (
             <Color
               key={i}
